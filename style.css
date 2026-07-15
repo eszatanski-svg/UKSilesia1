@@ -1257,6 +1257,19 @@ body::before {
   backdrop-filter: blur(14px);
 }
 
+.karta-kontaktowa-bez-zdjecia {
+  grid-template-columns: 1fr;
+  max-width: 860px;
+}
+
+.karta-kontaktowa-bez-zdjecia .dane-kontaktowe {
+  align-items: flex-start;
+}
+
+.karta-kontaktowa-bez-zdjecia .lista-kontaktowa {
+  width: min(100%, 640px);
+}
+
 .karta-kontaktowa::before {
   position: absolute;
   top: 0;
@@ -1266,19 +1279,6 @@ body::before {
   content: "";
   background: linear-gradient(90deg, transparent, var(--zloto), transparent);
   border-radius: 999px;
-}
-
-.zdjecie-kontaktowe {
-  min-height: clamp(360px, 45vw, 520px);
-  background:
-    linear-gradient(0deg, rgba(13, 11, 18, 0.06), rgba(13, 11, 18, 0.06)),
-    url("zdjecie.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  border: 1px solid rgba(196, 155, 113, 0.38);
-  border-radius: 8px;
-  box-shadow: 0 16px 34px rgba(13, 11, 18, 0.12);
 }
 
 .dane-kontaktowe {
@@ -1343,10 +1343,6 @@ body::before {
     grid-template-columns: 1fr;
   }
 
-  .zdjecie-kontaktowe {
-    min-height: 440px;
-    background-size: cover;
-  }
 }
 
 @media (max-width: 560px) {
@@ -1361,10 +1357,6 @@ body::before {
 
   .karta-kontaktowa {
     padding: 18px;
-  }
-
-  .zdjecie-kontaktowe {
-    min-height: 330px;
   }
 
   .dane-kontaktowe h2 {
